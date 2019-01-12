@@ -21,12 +21,10 @@ namespace LuckySpin
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, Lucky7 lucky7)
         {
-
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync(lucky7.Output);
+                await context.Response.WriteAsync(lucky7.Output());
             });
-
         }
     }
 }

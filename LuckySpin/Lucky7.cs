@@ -7,8 +7,7 @@ namespace LuckySpin
 {
     public class Lucky7
     {
-        public string Output {
-            get {
+        public string Output() {
                 Random random = new Random();
                 int a = random.Next(1, 10);
                 int b = random.Next(1, 10);
@@ -24,7 +23,6 @@ namespace LuckySpin
 
 
                 return output;
-            }
         }
     }
 }
