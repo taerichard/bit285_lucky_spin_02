@@ -1,18 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Images\LuckySevenExercise.jpg" />
+    <Content Remove="Views\Spinner\Index.cshtml" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
-<Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
-</PackageReference>
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
-
 </Project>
